@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue X Thermal | FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="faq.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <a href="index.html"><img src="Images/Logo_FullColor-01.webp" alt="Blue X Thermal logo"></a>
+            <button onclick="myFunction()" class="dropbtn">
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+       
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">home</a>
+            <a href="technology.html">technology</a>
+            <a href="company.html">about us</a>
+            <a href="faq.html">faq</a>
+        </div>
+    </header>
+
+    <!--Main body content-->
+    <main>
+        <section class="header">
+            <img src='Images/AdobeStock_217569056 2.jpg' alt="A hand typing on a keyboard">
+            <section id="tech">
+                <h1>faq</h1>
+            
+            </section>
+        </section>
+      <section class="faq">
+        <article>
+            <h2>
+                What is Bluexthermal’s 
+                (BXT) thin film, on the chip (OTC), 
+                evaporative cooling ?
+            </h2>
+            <p>
+                BXT’s technology has a few defining characteristics over other types of 2 phase cooling.
+                The Primary difference is that it is continuous meniscus. This means that unlike boiling
+                where the bubbles form a meniscus which then grows and collapses, our technology
+                allows for a much more stable and predictable evaporation mechanism. (see diagram).
+                Before adding multiple blades into the mix, we also have a 3D component on every
+                single blade in the form of the micro channels. This means that there is more overall
+                surface area that can form a thin film region which is required for efficient 2 phase
+                evaporation. This compares to boiling (or nucleated boiling) in which the total thin film
+                surface area can’t exceed the area of the heat source. When the chip is set on top, the
+                blades heat up and the many microchannels draw up the water like a sponge, setting the
+                stage for the meniscus and the 2 phase evaporation to take place. The vapor escape (line)
+                is through a side portal and can travel a great distance.<br><br>
+                The second characteristic is the 3D structure formed by combining multiple blades
+                stacked vertically along the face of the heat source. This has four benefits; (1) the first
+                being additional active surface area for evaporation closer to the heat source, (2) the
+                second is a dedicated vapor space to allow the vapor to freely leave the device and
+                transport the collected heat away to whatever desired rejection system is desired in the
+                application, (3) the third is a continuous liquid feed to the active site that has very high
+                flow capacity per square area of heat source. This means the device can serve other
+                applications where temperatures may be higher, but overall power density is above
+                10MW/m^2, where nearly every other 2 phase technology we are aware of fails due to
+                dryout on any scale larger than ~1cmx1cm, and (4) the fourth benefit is that we can work
+                with a bulk liquid pool. This allows a number of advantageous configurations such as
+                immersion cooling, or alternatively in a closed loop configuration, and allows the heat to
+                be carried much further from the source in a form that is higher quality heat to possibly
+                be used similar to co-generation.<br><br>
+                The BXT prototype testing used an Intel 10900 with the heat spreader removed against
+                the copper surface above the blades (see prototype photo). The patent provides for it, and
+                we believe the final endpoint of an “on the chip” set up may likely come in the form of
+                implementing the technology directly into the silicon die of the chips. This would
+                eliminate a number of critical thermal resistances which inhibit overall system
+                performance. In a typical small/medium die size CPU situation, only ~⅓ of the
+                temperature rise seen between the heat source and heat sink comes from the performance
+                of the cooling technology. The other ⅔ come from the thermal interfaces and extra
+                material required for structural integrity. With an etched on die approach, this could
+                likely remove more than ½ of the currently unavailable losses. However, the difficulty of
+                making a system work directly on the die is twofold. First, it needs to handle heat at a
+                much higher power density as there will be no opportunity to spread the heat laterally
+                (Taking heat load of a typical CPU from 1MW/m^2 to &gt;2.5MW/m^2). This is not
+                necessarily a problem in the heat range of today’s CPU’s. However, as the nodes
+                continue to shrink, the power density has only grown, not to mention stacked chip
+                architectures. The second challenge is that it needs to be low force and non-abrasive. Due
+                to this, single phase approaches that are able to handle the necessary heat load are
+                typically not suitable for integration directly into the silicon, which leaves them at a
+                significant disadvantage vs. 2 phase,, having to bond to the silicon increasing thermal
+                resistance.
+            </p>
+            <h2>
+                What is it about thin film evaporative cooling that promises better chip cooling
+                than traditional water cooling or immersion cooling ( boiling) ? Other advantages.
+            </h2>
+            <p>
+                As a general principle, 2-phase cooling is much more powerful than single phase.
+                Liquid water has a heat capacity of 4j/g*K, while evaporation carries away 2260j/g (at
+                nearly 0 degrees delta T). This means that to get a similar cooling performance, you
+                either need to pump 500x more liquid, or accept a much higher delta T between the
+                heat source and the working fluid. Ultimately from the literature and experiments BXT
+                conducted, this results in performance in the range of 100kW/m^2*K. With boiling, in
+                an immersion cooling scenario we expect that to be much lower (note: have not been able
+                to find reliable sources for current state of the art for immersion boiling). Without fully
+                optimizing, we have simulated versions of our prototype/structure that should yield
+                performance between 250-300kW/m^2*K. This performance would also be expected to
+                hold up even in an immersion setup, by simply latching on the BXT device. We believe
+                that this step alone would yield significant benefits for most existing immersion
+                technologies.
+            </p>
+            <h2>
+                Bluexthermal succeeded in building and testing a prototype of its technology which
+                was compared in a side by side test with an established water block cooling product.
+                What do those results suggest to us ?
+            </h2>
+            <p>
+                The BXT prototype was able to confirm a few things, but also highlighted a number of
+                steps that need to be completed to achieve full theoretical performance. We were able to
+                construct a full closed loop system that had a performance on par with today’s highest
+                performance off the shelf waterblocks, but operated on the principles of 3D continuous
+                meniscus thin film evaporation.<br><br>
+
+                This took the technology a step beyond the work performed at the University of Virginia
+                (UVA) which was mostly done in an open system with materials, heat sources, and
+                working fluids designed only to prove the underlying physics instead of maximizing heat
+                removal in a real world environment. These experiments performed at BXT were able to
+                show that in a relatively similar form-factor to existing technologies, we could construct a
+                working system that did not show any fundamental pitfalls. During this round of<br><br>
+
+                experimentation however, we were not able to achieve performance levels as high as
+                what is predicted by the theoretical models. We believe the number one contributor to
+                this was the lack of a robust super hydrophilic coating that is needed to achieve the
+                theoretical thin film geometry. In the UVA experiments this was not an issue due to the
+                working fluid and substrate materials involved, which naturally form a near 0 degree
+                contact angle, but are not necessarily ideal for a real world heat rejection system.
+                Between the two sets of experiments performed between UVA and BXT, we believe that
+                we proved the theoretical basis for the design, as well as confirmed that any remaining
+                work to get to a full performance real world model is merely an engineering challenge
+                rather than an exercise of pure science.
+            </p>
+        </article>
+      </section>
+    </main>
+     <!--Footer-->
+     <footer>
+        <address>
+            <p>000.000.0000</p>
+            <p>address</p>
+            <img src="Images/logo new-01.webp" alt="Blue X Thermal logo white">
+        </address>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+             <h2>contact us</h2>
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" name="name" required placeholder="Name..">
+            <span></span>
+            <input type="email" name="email" required placeholder="Email..">
+            <span></span>
+            <textarea name="message" required placeholder="Message.."></textarea>
+            <span></span>
+        
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        
+            <button type="submit">Submit</button>
+
+            <!-- Optional: Custom Redirection or Thank you Page
+            Make sure you add full URL including https:// -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        
+        </form>
+        
+    </footer>
+</body>

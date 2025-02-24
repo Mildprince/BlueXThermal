@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue X Thermal | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <a href="index.html" ><img src="Images/Logo_FullColor-01.webp" alt="Blue X Thermal logo"></a>
+            <button onclick="myFunction()" class="dropbtn">
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+       
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">home</a>
+            <a href="technology.html">technology</a>
+            <a href="company.html">about us</a>
+            <a href="faq.html">faq</a>
+        </div>
+        </header>
+
+    <!--Main body content-->
+    <main>
+        <section class="heroimage">
+            <img src="Images/AdobeStock_399568701 1.jpg" alt="An image of a room of servers">
+            <h1>what we do <br>is cool</h1>
+        </section>
+        <section class="tech">
+            <article>
+                <h2>
+                    technology
+                </h2>
+                <p>
+                    Our system leverages and perfectly balances 
+                    the power of evaporative cooling, and it’s
+                    exceptionally high heat transfer coefficient, 
+                    with the...
+                </p>
+                <a href="technology.html">
+                  <button>
+                      Learn More
+                  </button>
+                </a>
+            </article>
+            <img src="Images/AdobeStock_396946465 1.jpg" alt="Image of a chip on blue fire">
+        </section>
+
+        <section class="company">
+            <img src="Images/AdobeStock_Building.jpg" alt="image of skyscrapers">
+            <article>
+                <h2>
+                    about us
+                </h2>
+                <p>
+                    Bluexthermal (BXT) was established in the 
+                    summer of 2019 with the goal of delivering
+                    innovative and sustainable solutions to high 
+                    heat...
+                    
+                </p>
+                  <a href="company.html">
+                    <button>
+                    Learn More
+                    </button>
+                </a>
+            </article>
+        </section>
+    
+        <section class="faq">
+            <article>
+                <h2>
+                    faq
+                </h2>
+                <p>
+                    Check out the questions people ask us the most!
+                </p>
+                <a href="faq.html">
+                  <button>
+                      Learn More
+                  </button>
+                </a>
+            </article>
+            <img src="Images/AdobeStock_questions.jpg" alt="Hand typing on keyboard">
+        </section>
+    
+    </main>
+    <!--Footer-->
+    <footer>
+        <address>
+            <p>000.000.0000</p>
+            <p>address</p>
+            <img src="Images/logo new-01.webp" alt="Blue X Thermal logo white">
+        </address>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+             <h2>contact us</h2>
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" name="name" required placeholder="Name..">
+            <span></span>
+            <input type="email" name="email" required placeholder="Email..">
+            <span></span>
+            <textarea name="message" required placeholder="Message.."></textarea>
+            <span></span>
+        
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        
+            <button type="submit">Submit</button>
+
+            <!-- Optional: Custom Redirection or Thank you Page
+            Make sure you add full URL including https:// -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        
+        </form>
+        
+    </footer>
+</body>
+   

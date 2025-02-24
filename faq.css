@@ -1,0 +1,491 @@
+*{
+    font-family: 'Inter', sans-serif;
+  }
+  
+  :root {
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.36rem + 3.3555vw, 5.9605rem);
+    --step-8: clamp(4.8373rem, 3.9283rem + 4.5448vw, 7.4506rem);
+    --step-9: clamp(5.8048rem, 4.5844rem + 6.1017vw, 9.3132rem);
+    --step-10: clamp(6.9657rem, 5.3393rem + 8.1319vw, 11.6415rem);
+  }
+  
+  h1{
+    color: white;
+    font-size: var(--step-8);
+  }
+  
+  h2{
+    color: #5BA9DD;
+    font-size: var(--step-2);
+  
+  }
+  
+  p {
+    color:black;
+    font-size: var(--step-0);
+  }
+  
+  body{
+      display: grid;
+      grid-template: .5fr 3fr repeat(auto, 2) / 2% 1fr 2%;
+      margin: 0;
+  }
+  nav {
+      grid-area: 1 / 1 / span 1 / span 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  span{
+    position: absolute;
+    width: 100%;
+   
+    background-color: #5BA9DD;
+    height: 4px;
+  }
+  
+  nav img{
+      height: 25%;
+      margin-left: 1%;
+  }
+  
+  #nav-icon1 {
+      width: 60px;
+      height:45px;
+      position: relative;
+      margin-right: 1%;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+    
+    #nav-icon1 span {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 100%;
+      background: #5BA9DD;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+    
+    #nav-icon1 span:nth-child(1) {
+      top: 0px;
+    }
+    
+    #nav-icon1 span:nth-child(2) {
+      top: 18px;
+    }
+    
+    #nav-icon1 span:nth-child(3) {
+      top: 36px;
+    }
+    
+    #nav-icon1.open span:nth-child(1) {
+      top: 18px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+    
+    #nav-icon1.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    
+    #nav-icon1.open span:nth-child(3) {
+      top: 18px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+  
+    /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    z-index: 10;
+  }
+  
+  nav button{
+    border: none;
+    background-color: white;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 20;
+    right: 0;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #5BA9DD;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+  /*main content*/
+
+  /*header bar*/
+  .header{
+    grid-area: 2 / 1 / span 1 / span 3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header img{
+    width: 100%;
+    margin: 0;
+  }
+
+  .header section {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  #tech{
+    display: grid;
+    grid-template: 1fr / 1.5fr auto 2fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  #tech h1{
+    color: white;
+    font-size: var(--step-5);
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  #tech p{
+    color: white;
+    font-size: var(--step-0);
+    grid-area: 1 / 3 / span 1 / span 1;
+    width: 75%;
+  }
+
+  #tech span{
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    grid-area: 1 / 2 / span 1 / span 1;
+  }
+
+  article {
+    width: 50%;
+    margin: 5% 3%
+  }
+
+  article p {
+    font-size: var(--step--1);
+  }
+
+   /*footer*/
+
+   footer{
+    background-color: #5BA9DD;
+    width: auto;
+    max-height: 705px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    padding: 10% 2%;
+    
+  }
+
+  address{
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  address img{
+    width: 60%;
+  }
+
+  form{
+    grid-area: 1 / 2 / span 1 / span 1;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: none;
+    color: white;
+  }
+
+  footer p {
+    color: white;
+  }
+
+  input{
+    width: 90%;
+    margin: 2%;
+    height: 5%;
+    color: white;
+    -webkit-text-fill-color: rgb(255, 255, 255, 0.5); /* Adjusts only text opacity */
+    border: none;
+    font-size: var(--step--1);
+    background-color: #5BA9DD;
+  }
+
+  textarea{
+    width: 90%;
+    height: 40%;
+    color: white;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5); /* Adjusts only text opacity */
+    font-size: var(--step--1);
+    margin: 2%;
+    background-color: #5BA9DD;
+    border:none;
+  }
+
+form button{
+  background-color: #5BA9DD;
+  border: white 1px solid;
+  margin-top: 4%;
+  padding: 2%;
+  border-radius: 5px;
+  color:white;
+  font-size: var(--step--1);
+  width: 15%;
+}
+
+form button:hover{
+    background-color: white;
+    color:#5BA9DD;
+  }
+
+form span{
+  background-color: white;
+  width: 90%;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+
+form h2{
+color: white;
+}
+
+@media (max-width: 768px){
+
+  body{
+    display: grid;
+    grid-template: .5fr 3fr repeat(auto, 2) / 1% 1fr 1%;
+    margin: 0;
+}
+ .faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+#tech h1{
+  grid-area: 1 / 1 / span 1 / span 3;
+  font-size: var(--step-4);
+  text-align: center;
+}
+
+#tech p{
+  color: white;
+  font-size: var(--step--2);
+  grid-area: 1 / 3 / span 1 / span 1;
+  width: 75%;
+}
+
+#tech span{
+  height: 100%;
+}
+
+h1{
+  color: white;
+  font-size: var(--step-6);
+}
+
+h2{
+  color: #5BA9DD;
+  font-size: var(--step-3);
+  margin: 0;
+}
+
+
+
+#tech span{
+  height: 80%;
+  width: 2px;
+  background-color: white;
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+article {
+
+  width: 80%;
+  text-align: center;
+}
+
+article p {
+  font-size: var(--step--1);
+}
+
+ /*footer*/
+
+ footer{
+  background-color: #5BA9DD;
+  width: auto;
+  max-height: 705px;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  padding: 10% 2%;
+}
+
+footer h2{
+  margin-top: 2%;
+}
+
+address{
+  grid-area: 1 / 1 / span 1 / span 1;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+address img{
+  width: 60%;
+  text-align: center;
+}
+
+form{
+  grid-area: 2 / 1 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+}
+
+input{
+  width: 90%;
+  height: 5%;
+  color: white;
+  -webkit-text-fill-color: rgb(255, 255, 255, 0.5); /* Adjusts only text opacity */
+  border: none;
+  font-size: var(--step-0);
+  background-color: #5BA9DD;
+}
+
+textarea{
+  width: 90%;
+  height: 40%;
+  color: white;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.5); /* Adjusts only text opacity */
+  font-size: var(--step-0);
+  background-color: #5BA9DD;
+  border:none;
+}
+
+form button{
+background-color: #5BA9DD;
+border: white 1px solid;
+margin-top: 2%;
+padding: 2%;
+border-radius: 5px;
+color:white;
+font-size: var(--step--1);
+width: 15%;
+}
+
+form button:hover{
+background-color: white;
+color:#5BA9DD;
+}
+
+form span{
+background-color: white;
+width: 90%;
+height: 5px;
+border-radius: 5px;
+position: relative;
+}
+
+form h2{
+color: white;
+}
+
+}
+
+@media (max-width: 500px) {
+  #tech{
+    display: grid;
+    grid-template: 1fr / 1.5fr auto 2fr;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  #tech h1{
+    color: white;
+    font-size: var(--step-4);
+    grid-area: 1 / 1 / span 1 / span 3;
+   text-align: center;
+  }
+  
+  #tech p{
+    display: none;
+  }
+
+  #tech span{
+    display: none;
+  }
+}
+ 
+  
