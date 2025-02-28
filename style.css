@@ -396,10 +396,6 @@ form h2{
 color: white;
 }
 
-span {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
  
 /*media queries*/
 @media (max-width: 1080px){
