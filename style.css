@@ -672,6 +672,49 @@ color: white;
 
 }
 
+@media(max-width: 360px) {
+  /*header*/
+  nav img{
+    width: 50%;
+}
+
+
+#nav-icon1 {
+  scale: .5;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+  /*main*/
+
+  .tech button {
+    width: 40%;
+  }
+
+  .company button {
+    width: 40%;
+  }
+
+  .faq button {
+    width: 40%;
+  }
+
+  .faq img {
+    margin: 10% 0;
+  }
+
+  /*footer*/
+  input{
+    margin: 5%;
+  }
+
+  form button{
+    width: 20%;
+  }
+}
+
 
 
   
