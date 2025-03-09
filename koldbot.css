@@ -18,20 +18,6 @@
     --step-10: clamp(6.9657rem, 5.3393rem + 8.1319vw, 11.6415rem);
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  /* For elements that should animate with delays */
-  .delay-1 { transition-delay: 0.2s; }
-  .delay-2 { transition-delay: 0.4s; }
-  .delay-3 { transition-delay: 0.6s; }
   
   h1{
     color: white;
@@ -40,8 +26,8 @@
   
   h2{
     color: #5BA9DD;
-    font-size: var(--step-2);
-  
+    font-size: var(--step-4);
+    margin: 0;
   }
   
   p {
@@ -51,7 +37,7 @@
   
   body{
       display: grid;
-      grid-template: .5fr 3fr repeat(auto, 2) / 2% 1fr 2%;
+      grid-template: .5fr 3fr repeat( 5fr, 2) / 2% 1fr 2%;
       margin: 0;
   }
   nav {
@@ -221,24 +207,47 @@
   }
 
   #tech span{
-    height: 100%;
+    height: 130%;
     width: 2px;
     background-color: white;
     grid-area: 1 / 2 / span 1 / span 1;
   }
 
-  article {
-    width: 50%;
-    margin: 5% 3%
+  /*Koldbot section*/
+  .chip {
+    grid-area: 3/ 2 / span 1 / span 1;
+    display: grid;
+    grid-template: 1fr / 3% 1fr 1fr 3%;
+    margin: 5% 0;
+    column-gap: 1%;
+    align-items: center;
   }
 
-  article p {
-    font-size: var(--step--1);
+  .chip article {
+    grid-area: 1 / 2 / span 1 / span 1;
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items:  space-between;
+    justify-content: center;
+    
   }
 
-   /*footer*/
+  .chip img {
+    grid-area: 1 / 3 / span 1 / span 1;
+    width: 100%;
+    justify-self: end;
+  }
 
-   footer{
+  .chip p {
+    font-size: var(--step-0);
+  }
+
+
+  /*footer*/
+
+  footer{
     background-color: #5BA9DD;
     width: auto;
     max-height: 705px;
@@ -308,9 +317,9 @@ form button{
 }
 
 form button:hover{
-    background-color: white;
-    color:#5BA9DD;
-  }
+  background-color: white;
+  color:#5BA9DD;
+}
 
 form span{
   background-color: white;
@@ -323,26 +332,20 @@ form span{
 form h2{
 color: white;
 }
+@media (max-width: 1080px){
+    #tech h1{
+        font-size: var(--step-3);
+      }
+}
 
 @media (max-width: 768px){
 
   body{
     display: grid;
-    grid-template: .5fr 3fr repeat(auto, 2) / 1% 1fr 1%;
+    grid-template: .5fr 3fr repeat( auto, 2) / 1% 1fr 1%;
     margin: 0;
 }
- .faq{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- }
 
-#tech h1{
-  grid-area: 1 / 1 / span 1 / span 3;
-  font-size: var(--step-4);
-  text-align: center;
-}
 
 #tech p{
   color: white;
@@ -362,11 +365,14 @@ h1{
 
 h2{
   color: #5BA9DD;
-  font-size: var(--step-3);
+  font-size: var(--step-5);
   margin: 0;
 }
 
-
+p {
+  color:black;
+  font-size: var(--step-0);
+}
 
 #tech span{
   height: 80%;
@@ -375,14 +381,65 @@ h2{
   grid-area: 1 / 2 / span 1 / span 1;
 }
 
-article {
-
-  width: 80%;
-  text-align: center;
+/*Chip Cooling*/
+.chip {
+  grid-area: 3/ 2 / span 1 / span 1;
+  display: grid;
+  grid-template: auto auto/ 3% 1fr 3%;
+  margin: 5% 5%;
+  column-gap: 1%;
+  align-items: center;
 }
 
-article p {
+.chip article {
+  grid-area: 2 / 2 / span 1 / span 1;
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: start;
+    justify-self: center;
+    align-self: start;
+    text-align: center;
+}
+
+.chip img {
+  grid-area: 1 / 2 / span 1 / span 1;
+  width: 80%;
+  justify-self: center;
+}
+
+.chip p {
   font-size: var(--step--1);
+}
+
+/* pain management */
+.pain {
+  grid-area: 4 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template: auto auto / 3% 1fr 3%;
+  margin-top: 10%;
+  column-gap: 1%;
+  margin-bottom: 5%;
+}
+
+.pain article {
+  grid-area: 2 / 2 / span 1 / span 1;
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: space-around;
+    justify-self: center;
+    text-align: center;
+}
+
+.pain img {
+  grid-area: 1 / 2 / span 1 / span 1;
+  width: 80%;
+  justify-self: center;
 }
 
  /*footer*/
@@ -519,18 +576,16 @@ h1 {
 
 /*main*/
 
-h2 {
-  font-size: var(--step-2);
-}
-
-
-
 /*Chip Cooling*/
 
 .chip article {
     width: 85%;
 }
 
+/* pain management */
+.pain article {
+    width: 85%;
+}
   /*footer*/
   input{
     margin: 5%;
@@ -540,12 +595,5 @@ h2 {
     width: 20%;
   }
 }
- 
-  
- 
-  
- 
-  
-
  
   
