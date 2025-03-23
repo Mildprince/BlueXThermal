@@ -213,9 +213,42 @@
     grid-area: 1 / 2 / span 1 / span 1;
   }
 
+  /*Energy Treatment*/
+   
+  .Energy {
+
+    grid-area: 3/ 2 / span 1 / span 1;
+    display: grid;
+    grid-template: 40% 60% / repeat(3, 1fr);
+    margin: 5% 0;
+    justify-items: center;
+  }
+  
+
+  .Energy h2{
+    grid-area: 1 / 1 / span 1 / span 3;
+    justify-self: center;
+    
+  }
+
+  #graph {
+    grid-area: 2 / 1 / span 1/ span 1;
+    width: 90%;
+  }
+
+  #PA {
+    grid-area: 2 / 2 / span 1/ span 1;
+    width: 90%;
+  }
+
+  #solutions {
+    grid-area: 2 / 3 / span 1/ span 1;
+    width: 90%;
+  }
+
   /*Koldbot section*/
   .chip {
-    grid-area: 3/ 2 / span 1 / span 1;
+    grid-area: 4/ 2 / span 1 / span 1;
     display: grid;
     grid-template: 1fr / 3% 1fr 1fr 3%;
     margin: 5% 0;
@@ -381,18 +414,48 @@ p {
   grid-area: 1 / 2 / span 1 / span 1;
 }
 
+/*Energy Treatment*/
+   
+.Energy {
+
+  grid-template: 1fr repeat(3, 2fr) / 1fr;
+  padding: 5%;
+  justify-items: center;
+  row-gap: 5%;
+}
+
+
+.Energy h2{
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#graph {
+  grid-area: 2 / 1 / span 1/ span 1;
+  width: 60%;
+}
+
+#PA {
+  grid-area: 3 / 1 / span 1/ span 1;
+  width: 60%;
+}
+
+#solutions {
+  grid-area: 4 / 1 / span 1/ span 1;
+  width: 60%;
+}
+
 /*Chip Cooling*/
 .chip {
   grid-area: 3/ 2 / span 1 / span 1;
   display: grid;
   grid-template: auto auto/ 3% 1fr 3%;
-  margin: 5% 5%;
+  padding: 5%;
   column-gap: 1%;
   align-items: center;
 }
 
 .chip article {
-  grid-area: 2 / 2 / span 1 / span 1;
+  grid-area: 1 / 2 / span 1 / span 1;
     height: 75%;
     width: 75%;
     display: flex;
@@ -405,41 +468,13 @@ p {
 }
 
 .chip img {
-  grid-area: 1 / 2 / span 1 / span 1;
+  grid-area: 2 / 2 / span 1 / span 1;
   width: 80%;
   justify-self: center;
 }
 
 .chip p {
   font-size: var(--step--1);
-}
-
-/* pain management */
-.pain {
-  grid-area: 4 / 2 / span 1 / span 1;
-  display: grid;
-  grid-template: auto auto / 3% 1fr 3%;
-  margin-top: 10%;
-  column-gap: 1%;
-  margin-bottom: 5%;
-}
-
-.pain article {
-  grid-area: 2 / 2 / span 1 / span 1;
-    height: 75%;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items:  center;
-    justify-content: space-around;
-    justify-self: center;
-    text-align: center;
-}
-
-.pain img {
-  grid-area: 1 / 2 / span 1 / span 1;
-  width: 80%;
-  justify-self: center;
 }
 
  /*footer*/
@@ -537,6 +572,8 @@ color: white;
 }
 
 @media (max-width: 500px) {
+
+   
   #tech{
     display: grid;
     grid-template: 1fr / 1.5fr auto 2fr;
@@ -572,6 +609,12 @@ color: white;
 
 h1 {
   font-size: var(--step-5);
+}
+
+.Energy h2{
+  grid-area: 1 / 1 / span 1 / span 1;
+  font-size: var(--step-4);
+
 }
 
 /*main*/
