@@ -245,6 +245,7 @@
 
   .partners {
     grid-area: 3 / 1 / span 1 / span 1;
+ 
   }
 
   .partners h2 {
@@ -432,6 +433,7 @@ p {
 .partners {
   grid-area: 4 / 2 / span 1 / span 1;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .partners h2 {
@@ -592,6 +594,7 @@ h1 {
 
 .partners {
   margin-top: 10%;
+
 }
 
   /*footer*/
